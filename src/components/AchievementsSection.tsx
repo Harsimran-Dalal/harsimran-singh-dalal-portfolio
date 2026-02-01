@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Trophy, Award, Star, Medal, Users } from "lucide-react";
+import { Trophy, Award, Star, Medal, Users, ExternalLink } from "lucide-react";
 
 const achievements = [
   {
@@ -37,6 +37,13 @@ const achievements = [
 ];
 
 const communityInvolvement = [
+  {
+    role: "Overall Hackathon Coordinator",
+    organization: "TIET Innovation Council",
+    period: "2024-25",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7419079130102669312/",
+    websiteLink: "https://innovation.thapar.edu/",
+  },
   {
     role: "Member",
     organization: "OWASP TIET",
@@ -135,14 +142,54 @@ const AchievementsSection = () => {
             Open Source & Community
           </h3>
 
-          <div className="grid md:grid-cols-3 gap-4">
-            {communityInvolvement.map((item, index) => (
+          {/* First row - 3 items */}
+          <div className="grid md:grid-cols-3 gap-4 mb-4">
+            {communityInvolvement.slice(0, 3).map((item, index) => (
               <motion.div
                 key={item.organization}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
                 className="glass-card p-4 text-center"
+              >
+                <p className="font-medium text-primary mb-1">{item.role}</p>
+                <p className="text-sm font-medium mb-1">{item.organization}</p>
+                <p className="text-xs text-muted-foreground mb-2">{item.period}</p>
+                {item.link && (
+                  <div className="flex justify-center gap-2">
+                    <a 
+                      href={item.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-xs text-primary hover:underline inline-flex items-center gap-1"
+                    >
+                      LinkedIn <ExternalLink size={10} />
+                    </a>
+                    {item.websiteLink && (
+                      <a 
+                        href={item.websiteLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-xs text-primary hover:underline inline-flex items-center gap-1"
+                      >
+                        Website <ExternalLink size={10} />
+                      </a>
+                    )}
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Second row - last item centered */}
+          <div className="flex justify-center">
+            {communityInvolvement.slice(3).map((item, index) => (
+              <motion.div
+                key={item.organization}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.4, delay: 1.0 + index * 0.1 }}
+                className="glass-card p-4 text-center w-full max-w-xs"
               >
                 <p className="font-medium text-primary mb-1">{item.role}</p>
                 <p className="text-sm font-medium mb-1">{item.organization}</p>
