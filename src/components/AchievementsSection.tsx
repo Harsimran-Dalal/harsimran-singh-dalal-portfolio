@@ -38,9 +38,10 @@ const achievements = [
 
 const communityInvolvement = [
   {
-    role: "Overall Hackathon Coordinator",
-    organization: "TIET Innovation Council",
-    period: "2024-25",
+    role: "Innovation Challenge 2026",
+    subtitle: "SabkaAI: AI for Inclusion",
+    organization: "Official Pre-Summit Event of the AI Impact Summit 2026",
+    period: "TIET Innovation Council",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7419079130102669312/",
     websiteLink: "https://innovation.thapar.edu/",
   },
@@ -153,6 +154,9 @@ const AchievementsSection = () => {
                 className="glass-card p-4 text-center"
               >
                 <p className="font-medium text-primary mb-1">{item.role}</p>
+                {item.subtitle && (
+                  <p className="text-xs text-primary/80 mb-1">{item.subtitle}</p>
+                )}
                 <p className="text-sm font-medium mb-1">{item.organization}</p>
                 <p className="text-xs text-muted-foreground mb-2">{item.period}</p>
                 {item.link && (
