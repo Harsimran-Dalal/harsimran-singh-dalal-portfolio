@@ -38,10 +38,10 @@ const achievements = [
 
 const communityInvolvement = [
   {
-    role: "Innovation Challenge 2026",
-    subtitle: "SabkaAI: AI for Inclusion",
+    role: "Overall Hackathon Coordinator",
+    subtitle: "Innovation Challenge 2026 – SabkaAI: AI for Inclusion",
     organization: "Official Pre-Summit Event of the AI Impact Summit 2026",
-    period: "TIET Innovation Council",
+    period: "",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7419079130102669312/",
     websiteLink: "https://innovation.thapar.edu/",
   },
