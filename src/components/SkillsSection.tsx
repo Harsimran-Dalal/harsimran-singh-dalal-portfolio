@@ -48,7 +48,7 @@ const SkillsSection = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories.map((category, index) => {
+          {skillCategories.slice(0, 3).map((category, index) => {
             const Icon = category.icon;
             return (
               <motion.div
@@ -56,6 +56,37 @@ const SkillsSection = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
+                className="glass-card p-6"
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-2 rounded-lg bg-primary/10">
+                    <Icon className="text-primary" size={20} />
+                  </div>
+                  <h4 className="font-semibold">{category.title}</h4>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <span key={skill} className="skill-badge">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Bottom row - center aligned */}
+        <div className="grid md:grid-cols-2 gap-6 mt-6 max-w-2xl mx-auto">
+          {skillCategories.slice(3).map((category, index) => {
+            const Icon = category.icon;
+            return (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                 className="glass-card p-6"
               >
                 <div className="flex items-center gap-3 mb-6">
