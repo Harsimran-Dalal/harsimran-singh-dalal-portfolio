@@ -58,7 +58,7 @@ const HeroSection = () => {
               transition={{ delay: 0.3 }}
               className="text-lg md:text-xl text-muted-foreground font-mono mb-6"
             >
-              AI • Explainable ML • Embedded Systems • Smart Agriculture
+              Python • Machine Learning • Deep Learning • C++ • GCP • Open Source Contributor
             </motion.p>
 
             <motion.p
