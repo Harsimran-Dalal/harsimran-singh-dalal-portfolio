@@ -85,14 +85,17 @@ const AboutSection = () => {
               <div className="pt-4 border-t border-border">
                 <div className="flex items-center justify-between">
                   <span className="text-muted-foreground">CGPA</span>
-                  <span className="text-2xl font-bold gradient-text">8.52</span>
+                  <div className="text-right">
+                    <span className="text-2xl font-bold gradient-text">8.32</span>
+                    <span className="text-sm text-muted-foreground ml-2">(3.33/4.0)</span>
+                  </div>
                 </div>
               </div>
 
               <div className="pt-4 border-t border-border space-y-2">
                 <p className="text-sm font-medium">Relevant Coursework</p>
                 <div className="flex flex-wrap gap-2">
-                  {["Data Structures", "AI/ML", "DBMS", "OS", "Networks"].map((course) => (
+                  {["Data Structures", "AI/ML", "DBMS", "OS", "Computer & Communication Networks"].map((course) => (
                     <span key={course} className="text-xs px-2 py-1 bg-secondary rounded text-secondary-foreground">
                       {course}
                     </span>
