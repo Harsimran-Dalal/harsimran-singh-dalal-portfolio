@@ -70,9 +70,9 @@ const AchievementsSection = () => {
           <h3 className="text-3xl md:text-4xl font-bold mb-12">Recognition & Awards</h3>
         </motion.div>
 
-        {/* Achievements Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {achievements.map((achievement, index) => {
+        {/* Achievements Grid - First 3 */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+          {achievements.slice(0, 3).map((achievement, index) => {
             const Icon = achievement.icon;
             return (
               <motion.div
@@ -80,6 +80,33 @@ const AchievementsSection = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
+                className="glass-card p-6 hover:border-primary/50 transition-all duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-primary/10 shrink-0">
+                    <Icon className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">{achievement.title}</h4>
+                    <p className="text-sm text-primary font-medium mb-2">{achievement.subtitle}</p>
+                    <p className="text-sm text-muted-foreground">{achievement.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Achievements Grid - Last 2 centered */}
+        <div className="grid md:grid-cols-2 gap-6 mb-16 max-w-2xl mx-auto">
+          {achievements.slice(3).map((achievement, index) => {
+            const Icon = achievement.icon;
+            return (
+              <motion.div
+                key={achievement.title}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                 className="glass-card p-6 hover:border-primary/50 transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
