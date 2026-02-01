@@ -34,12 +34,17 @@ const AboutSection = () => {
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Currently, I'm focused on <span className="text-foreground font-medium">Explainable AI 
-              (XAI)</span> and its applications in sustainable agriculture.
+              (XAI)</span> and its applications in sustainable agriculture, while actively exploring 
+              <span className="text-foreground font-medium"> machine learning and deep learning techniques 
+                </span>, cloud platforms like 
+                <span className="text-foreground font-medium"> GCP</span>, and DevOps 
+              practices for scalable ML deployment.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Beyond academics, I actively contribute to <span className="text-foreground font-medium">
-              open-source projects</span> and participate in hackathons. I'm passionate about 
-              interdisciplinary innovation that creates real-world impact.
+              open-source projects</span> and participate in hackathons, and am exploring 
+              <span className="text-foreground font-medium"> reinforcement 
+              learning (RL)</span> for intelligent decision-making systems.
             </p>
 
             {/* Interest Tags */}
