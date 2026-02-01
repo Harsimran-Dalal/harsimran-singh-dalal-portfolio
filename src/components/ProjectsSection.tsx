@@ -2,28 +2,30 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Github, ExternalLink, Folder } from "lucide-react";
-
 const projects = [
   {
-    title: "Legal Document Demystifier",
-    description: "AI-powered web app to simplify complex legal documents using Generative AI. Deployed a responsive, user-friendly solution with modern frontend technologies.",
-    tech: ["Python", "GenAI", "React", "Vercel"],
-    github: "https://github.com/Harsimran-Dalal",
-    live: "#",
+    title: "Guardiant",
+    description:
+      "AI-powered legal assistance platform focused on contract analysis, risk identification, and document intelligence. Built to enhance legal decision-making using modern AI techniques.",
+    tech: ["Python", "Generative AI", "NLP", "React"],
+    github: "https://github.com/Harsimran-Dalal/Guardiant",
     featured: true,
   },
   {
-    title: "XAI-Driven Rover for Smart Agriculture",
-    description: "Explainable AI-enabled rover with a robotic arm for real-time pest and crop disease detection using computer vision. Focuses on sustainable farming practices.",
-    tech: ["Python", "TensorFlow", "SHAP", "ESP32", "OpenCV"],
-    github: "https://github.com/Harsimran-Dalal",
+    title: "Legal Document Demystifier",
+    description:
+      "AI-powered web app to simplify complex legal documents using Generative AI. Deployed a responsive, user-friendly solution with modern frontend technologies.",
+    tech: ["Python", "GenAI", "React", "Vercel"],
+    github: "https://github.com/Harsimran-Dalal/google-gen-hack1",
     featured: true,
   },
+
   {
     title: "CI/CD with Jenkins on Google Kubernetes Engine",
-    description: "Complete CI/CD pipeline on Google Cloud using Jenkins, Docker, and Kubernetes. Automated continuous delivery with rolling updates on GKE.",
+    description:
+      "Complete CI/CD pipeline on Google Cloud using Jenkins, Docker, and Kubernetes. Automated continuous delivery with rolling updates on GKE.",
     tech: ["Go", "Jenkins", "Docker", "Kubernetes", "GCP"],
-    github: "https://github.com/Harsimran-Dalal",
+    github: "https://github.com/Harsimran-Dalal/Continuous-Delivery-jenkins-gke",
     featured: true,
   },
 ];
@@ -91,11 +93,18 @@ const ProjectsSection = () => {
 
               <div className="flex flex-wrap gap-2 mt-auto">
                 {project.tech.map((tech) => (
-                  <span key={tech} className="text-xs font-mono text-muted-foreground">
+                  <span
+                    key={tech}
+                    className="px-3 py-1 text-xs font-mono rounded-full
+                              bg-primary/10 text-primary
+                              border border-primary/20
+                              hover:bg-primary/20 transition-colors"
+                  >
                     {tech}
                   </span>
                 ))}
               </div>
+
             </motion.article>
           ))}
         </div>

@@ -1,73 +1,136 @@
-# Welcome to your Lovable project
+# Harsimran Singh Dalal - Portfolio
 
-## Project info
+A modern, responsive portfolio website showcasing my work in AI/ML, Explainable AI, embedded systems, and smart agriculture. Built with React, TypeScript, and Vite.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 Features
 
-## How can I edit this code?
+- **Modern UI/UX**: Clean, responsive design with smooth animations
+- **SEO Optimized**: Comprehensive meta tags, Open Graph, and structured data
+- **Performance**: Fast loading with Vite's optimized build
+- **Accessibility**: Semantic HTML and ARIA-friendly components
+- **Dark Mode**: Built-in dark theme support
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+- **Framework**: React 18.3.1
+- **Build Tool**: Vite 5.4.19
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Animations**: Framer Motion
+- **Routing**: React Router DOM
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 📦 Installation
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js 18+ (recommended: use [nvm](https://github.com/nvm-sh/nvm#installing-and-updating))
+- npm, yarn, or bun
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Setup
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```bash
+# Clone the repository
+git clone https://github.com/Harsimran-Dalal/harsimran-singh-dalal-portfolio.git
 
-Follow these steps:
+# Navigate to project directory
+cd harsimran-singh-dalal-portfolio
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Install dependencies
+npm install
+# or
+yarn install
+# or
+bun install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
+# or
+yarn dev
+# or
+bun dev
 ```
 
-**Edit a file directly in GitHub**
+The development server will start at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🏗️ Build
 
-**Use GitHub Codespaces**
+```bash
+# Production build
+npm run build
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Preview production build
+npm run preview
+```
 
-## What technologies are used for this project?
+## 🚢 Deployment
 
-This project is built with:
+### Vercel (Recommended)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Push your code to GitHub
+2. Import the repository in [Vercel](https://vercel.com)
+3. Vercel will automatically detect Vite and configure the build settings
+4. Deploy!
 
-## How can I deploy this project?
+The project includes `vercel.json` for optimal Vercel deployment configuration.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Other Platforms
 
-## Can I connect a custom domain to my Lovable project?
+This is a static site and can be deployed to:
+- **Netlify**: Connect your GitHub repo
+- **GitHub Pages**: Use GitHub Actions or manual build
+- **Cloudflare Pages**: Connect repository
+- Any static hosting service
 
-Yes, you can!
+## 📁 Project Structure
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```
+├── public/          # Static assets
+├── src/
+│   ├── assets/      # Images and media
+│   ├── components/  # React components
+│   │   └── ui/      # shadcn/ui components
+│   ├── hooks/       # Custom React hooks
+│   ├── integrations/# Third-party integrations
+│   ├── lib/         # Utility functions
+│   ├── pages/       # Page components
+│   └── main.tsx     # Entry point
+├── index.html       # HTML template
+└── vite.config.ts   # Vite configuration
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 🎯 Sections
+
+- **Hero**: Introduction and key highlights
+- **About**: Background, education, and interests
+- **Experience**: Professional experience and internships
+- **Projects**: Featured projects with descriptions
+- **Skills**: Technical skills and technologies
+- **Achievements**: Awards, certifications, and recognitions
+- **Contact**: Get in touch form and social links
+
+## 🔧 Environment Variables
+
+Currently, no environment variables are required. If you plan to use Supabase in the future, create a `.env` file:
+
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_PUBLISHABLE_KEY=your_supabase_key
+```
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👤 Author
+
+**Harsimran Singh Dalal**
+
+- GitHub: [@Harsimran-Dalal](https://github.com/Harsimran-Dalal)
+- LinkedIn: [Harsimran Singh Dalal](https://www.linkedin.com/in/harsimran-singh-dalal-614a39286/)
+- Email: harsimransinghdalal@gmail.com
+
+## 🙏 Acknowledgments
+
+- [shadcn/ui](https://ui.shadcn.com/) for the beautiful component library
+- [Vite](https://vitejs.dev/) for the blazing-fast build tool
+- [Framer Motion](https://www.framer.com/motion/) for smooth animations

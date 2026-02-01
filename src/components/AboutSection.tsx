@@ -30,13 +30,11 @@ const AboutSection = () => {
             <p className="text-muted-foreground leading-relaxed">
               I'm an adaptable Electronics and Computer Engineering student with hands-on 
               experience in <span className="text-foreground font-medium">AI/ML, embedded systems, 
-              and real-time data processing</span>. My work spans from building intelligent 
-              agricultural systems to developing explainable AI solutions.
+              and real-time data processing</span>. 
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Currently, I'm focused on <span className="text-foreground font-medium">Explainable AI 
-              (XAI)</span> and its applications in sustainable agriculture. I believe in building 
-              technology that not only works but can be understood and trusted by its users.
+              (XAI)</span> and its applications in sustainable agriculture.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Beyond academics, I actively contribute to <span className="text-foreground font-medium">
@@ -45,13 +43,7 @@ const AboutSection = () => {
             </p>
 
             {/* Interest Tags */}
-            <div className="flex flex-wrap gap-2 pt-4">
-              {["Smart Agriculture", "Explainable AI", "Computer Vision", "DevOps", "Sustainability"].map((interest) => (
-                <span key={interest} className="skill-badge">
-                  {interest}
-                </span>
-              ))}
-            </div>
+            
           </motion.div>
 
           {/* Education Card */}
@@ -95,7 +87,7 @@ const AboutSection = () => {
               <div className="pt-4 border-t border-border space-y-2">
                 <p className="text-sm font-medium">Relevant Coursework</p>
                 <div className="flex flex-wrap gap-2">
-                  {["Data Structures", "AI/ML", "DBMS", "OS", "Computer & Communication Networks"].map((course) => (
+                  {["Data Structures", "AI/ML", "Computer & Communication Networks", "DBMS", "OS"].map((course) => (
                     <span key={course} className="text-xs px-2 py-1 bg-secondary rounded text-secondary-foreground">
                       {course}
                     </span>
